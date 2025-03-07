@@ -20,8 +20,8 @@ class _BottomNavigationBarComponentState
   late int currentPageIndex = widget.cur;
 
   final List<NavigationDestination> destinations = const [
-    NavigationDestination(icon: Icon(Icons.dashboard),selectedIcon:Icon(Icons.dashboard,color: Colors.white,) , label: "Dashboard"),
-    NavigationDestination(icon: Icon(Icons.home),selectedIcon:Icon(Icons.home,color: Colors.white,) , label: "Home"),
+    NavigationDestination(icon: Icon(Icons.dashboard) , label: "Dashboard"),
+    NavigationDestination(icon: Icon(Icons.home), label: "Home"),
 
   ];
 

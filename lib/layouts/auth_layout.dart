@@ -26,13 +26,14 @@ class _AuthLayoutState extends State<AuthLayout> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.blue,
+            backgroundColor: Theme.of(context).hoverColor,
             title: Text(
               pageName[currentPageIndex],
-              style: TextStyle(color: Colors.white),
             ),
+      
           ),
           body: pages[currentPageIndex],
           bottomNavigationBar: BottomNavigationBarComponent(
