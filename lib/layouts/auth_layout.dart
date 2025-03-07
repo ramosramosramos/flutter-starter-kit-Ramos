@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/layouts/bottom_navigation.dart';
+import 'package:flutter_starter_kit/pages/dashboardScreen.dart';
+import 'package:flutter_starter_kit/pages/homeScreen.dart';
 
 class AuthLayout extends StatefulWidget {
   const AuthLayout({super.key});
@@ -13,8 +15,8 @@ class _AuthLayoutState extends State<AuthLayout> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = [
-      const DashboardPage(),
-      const Home(),
+      const Homescreen(),
+      const Dashboardscreen(),
     ];
 
     final List<String> pageName = [
@@ -41,38 +43,6 @@ class _AuthLayoutState extends State<AuthLayout> {
               });
             },
           )),
-    );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home'),
-    );
-  }
-}
-
-class DashboardPage extends StatefulWidget {
-  const DashboardPage({super.key});
-
-  @override
-  State<DashboardPage> createState() => _DashboardPageState();
-}
-
-class _DashboardPageState extends State<DashboardPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('DashboardPage'),
     );
   }
 }
