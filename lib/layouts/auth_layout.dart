@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/layouts/bottom_navigation.dart';
 
-
-class Dashboard extends StatefulWidget {
-  const Dashboard({super.key});
+class AuthLayout extends StatefulWidget {
+  const AuthLayout({super.key});
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<AuthLayout> createState() => _AuthLayoutState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _AuthLayoutState extends State<AuthLayout> {
   int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -18,11 +17,11 @@ class _DashboardState extends State<Dashboard> {
       const Home(),
     ];
 
-final List<String> pageName = [
-  'Dashboard',
-  'Home',
-];
-  
+    final List<String> pageName = [
+      'Dashboard',
+      'Home',
+    ];
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -39,7 +38,6 @@ final List<String> pageName = [
             onTabSelected: (index) {
               setState(() {
                 currentPageIndex = index;
-                
               });
             },
           )),
@@ -62,7 +60,6 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});

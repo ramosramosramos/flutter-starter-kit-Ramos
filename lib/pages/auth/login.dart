@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ElevatedButton(onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>Dashboard()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthLayout()));
       }, child: Text("Login")),
     );
   }
