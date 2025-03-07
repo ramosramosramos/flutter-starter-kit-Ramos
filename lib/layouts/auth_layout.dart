@@ -12,7 +12,7 @@ class AuthLayout extends StatefulWidget {
 }
 
 class _AuthLayoutState extends State<AuthLayout> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 2;
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = [
@@ -39,7 +39,7 @@ class _AuthLayoutState extends State<AuthLayout> {
             ),
       
           ),
-          body: pages[currentPageIndex],
+          body: Expanded(child: pages[currentPageIndex]),
           bottomNavigationBar: BottomNavigationBarComponent(
             cur: currentPageIndex,
             onTabSelected: (index) {
