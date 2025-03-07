@@ -22,6 +22,7 @@ class _BottomNavigationBarComponentState
   final List<NavigationDestination> destinations = const [
     NavigationDestination(icon: Icon(Icons.dashboard) , label: "Dashboard"),
     NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+    NavigationDestination(icon: Icon(Icons.account_circle), label: "Profile"),
 
   ];
 

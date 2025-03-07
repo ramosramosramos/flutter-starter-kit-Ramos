@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter_kit/layouts/bottom_navigation.dart';
 import 'package:flutter_starter_kit/pages/dashboardScreen.dart';
 import 'package:flutter_starter_kit/pages/homeScreen.dart';
+import 'package:flutter_starter_kit/pages/profile/profileScreen.dart';
 
 class AuthLayout extends StatefulWidget {
   const AuthLayout({super.key});
@@ -17,11 +18,14 @@ class _AuthLayoutState extends State<AuthLayout> {
     final List<Widget> pages = [
       const Homescreen(),
       const Dashboardscreen(),
+      const Profilescreen(),
     ];
 
     final List<String> pageName = [
       'Dashboard',
       'Home',
+      'Profile',
+
     ];
 
     return MaterialApp(
