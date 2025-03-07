@@ -16,15 +16,11 @@ class _DashboardState extends State<Dashboard> {
     final List<Widget> pages = [
       const DashboardPage(),
       const Home(),
-      const Setting(),
-      const Store(),
     ];
 
 final List<String> pageName = [
   'Dashboard',
   'Home',
-  'Settings',
-  'Store',
 ];
   
     return MaterialApp(
@@ -40,7 +36,7 @@ final List<String> pageName = [
           body: pages[currentPageIndex],
           bottomNavigationBar: BottomNavigationBarComponent(
             cur: currentPageIndex,
-            onTabSeleted: (index) {
+            onTabSelected: (index) {
               setState(() {
                 currentPageIndex = index;
                 
@@ -66,37 +62,7 @@ class _HomeState extends State<Home> {
     );
   }
 }
-class Setting extends StatefulWidget {
-  const Setting({super.key});
 
-  @override
-  State<Setting> createState() => _SettingState();
-}
-
-class _SettingState extends State<Setting> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Setting'),
-    );
-  }
-}
-
-class Store extends StatefulWidget {
-  const Store({super.key});
-
-  @override
-  State<Store> createState() => _StoreState();
-}
-
-class _StoreState extends State<Store> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Store'),
-    );
-  }
-}
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
